@@ -3,6 +3,7 @@ import axios from "axios";
 import Card from "../../components/card";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import "./index.css"
 
 const darkTheme = createTheme({
   palette: {
@@ -25,7 +26,7 @@ function Inicial () {
   
   return (
     <div className="inicial">
-      <h1>Busca de repositórios no Github</h1>
+      <h1>Buscar usuário no Github</h1>
       <input
         type="text"
         placeholder="Digite o nome do usuário"
@@ -33,7 +34,7 @@ function Inicial () {
         onChange={(e) => setnomeUsuario(e.target.value)} // atualiza o estado com o valor do input
       />
       <button onClick={() => carregaRepositorios(nomeUsuario, setnomeUsuario, setlistaRepositorios)}>
-        Buscar usuário
+        Buscar
       </button>
       <div className="cards">
         {listaRepositorios.map((repositorio) => (
