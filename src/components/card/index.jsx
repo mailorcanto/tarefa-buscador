@@ -6,7 +6,13 @@ import Typography from '@mui/material/Typography';
 
 const CardRepositorio = ({ title, content, image, link }) => {
   return (
-    <Card sx={{ maxWidth: 300, margin: '17.5px', border: '2px solid black', borderColor: 'darkgrey', borderRadius: 4, textAlign: 'center', display: 'block' }}>
+    <Card sx={{ maxWidth: 300, 
+                margin: '17.5px', 
+                border: '2px solid black', 
+                borderColor: 'darkgrey', 
+                borderRadius: 4, 
+                textAlign: 'center', 
+                display: 'block' }}>
       <CardActionArea href={link}>
         <CardMedia
           component="img"
