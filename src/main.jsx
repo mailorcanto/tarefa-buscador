@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Inicial from './pages/inicial/index'
+import Dark from './pages/inicial/index.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Inicial />
+    <Dark />
   </React.StrictMode>,
 )
