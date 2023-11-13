@@ -1,9 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import Card from "../../components/card";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import "./index.css"
+import CardRepositorio from '../../components/card';
 
 const darkTheme = createTheme({
   palette: {
@@ -39,8 +38,7 @@ function Inicial () {
       <div className="cards">
         {listaRepositorios.map((repositorio) => (
           // renderiza os repositórios do usuário em cards
-          <Card
-            key={repositorio.id}
+          <CardRepositorio
             title={repositorio.name}
             content={repositorio.description}
             image={repositorio.owner.avatar_url}
@@ -51,6 +49,7 @@ function Inicial () {
     </div>
   );
 }
+
 
 // função para carregar os repositórios do usuário
 async function carregaRepositorios(nomeUsuario, setnomeUsuario, setlistaRepositorios) {
